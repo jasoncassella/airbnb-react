@@ -22,9 +22,9 @@ body {
 
 .navbar img {
   margin-left: 30px;
-  
+
   /* fix for weird bug on safari browsers */
-  max-width: 100px; 
+  max-width: 100px;
 }
 
 .hero img {
@@ -49,4 +49,43 @@ body {
   font-weight: 300;
   line-height: 17.6px;
   margin: 0.7rem 0;
+}
+
+.card {
+  font-size: 12px;
+  line-height: 20px;
+  margin: 40px 30px;
+}
+
+.card img {
+  border-radius: 9px;
+}
+
+.line-1 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 3px;
+}
+
+.gray {
+  color: #918E9B;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.image-label {
+  text-transform: uppercase;
+  position: absolute;
+  width: 61px;
+  height: 20px;
+  left: 38px;
+  top: 505px;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  font-size: 10.24px;
+  display: flex;
+  justify-content: center;
 }
