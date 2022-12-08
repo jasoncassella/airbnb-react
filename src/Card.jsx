@@ -1,21 +1,21 @@
-export default function Card() {
+export default function Card(props) {
 	return (
 		<div className='card'>
-			<img src='/src/assets/katie-zaferes.png' width='176' />
+			<img src={`/src/assets/${props.img}`} width='176' />
 			<div className='image-label'>sold out</div>
 			<div className='line-1'>
 				<img src='/src/assets/star.png' width='14' />
-				<span>5.0</span>
-				<span className='gray'>(6)</span>
+				<span>{props.rating}</span>
+				<span className='gray'>({props.reviewCount})</span>
 				<img src='/src/assets/Ellipse-6.png' width='2' />
-				<span className='gray'>USA</span>
+				<span className='gray'>{props.country}</span>
 			</div>
 			<div className='line-2'>
-				<span>Life lessons with Katie Zaferes</span>
+				<span>{props.title}</span>
 			</div>
 			<div className='line-3'>
-				<span className='bold'>From $136</span>
-				<span>/ person</span>
+				<span className='bold'>From {props.price}</span>
+				<span> / person</span>
 			</div>
 		</div>
 	);
