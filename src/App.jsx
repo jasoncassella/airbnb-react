@@ -5,7 +5,7 @@ import Card from './Card';
 import data from './data';
 
 export default function App() {
-	const cardElements = data.map(experience => (
+	const cards = data.map(experience => (
 		<Card
 			img={experience.coverImg}
 			rating={experience.stats.rating}
@@ -19,7 +19,7 @@ export default function App() {
 		<div className='app'>
 			<Navbar />
 			{/* <Hero /> */}
-			{cardElements}
+			{cards}
 		</div>
 	);
 }
