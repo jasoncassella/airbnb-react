@@ -2,32 +2,24 @@ import './App.css';
 import Navbar from './Navbar';
 import Hero from './Hero';
 import Card from './Card';
-
-/*
-Challenge:
-
-- import the array of data from data.js
-- map over the array to create <Card /> components
-- display the array of card components under the navbar
-  (in place of the current <Card /> component)
-
-Note: We haven't styled the group of components yet, so they'll
-still be block elements, stacked vertically. We'll add styling later.
-*/
+import data from './data';
 
 export default function App() {
+	const cardElements = data.map(experience => (
+		<Card
+			img={experience.coverImg}
+			rating={experience.stats.rating}
+			reviewCount={experience.stats.reviewCount}
+			location={experience.location}
+			title={experience.title}
+			price={experience.price}
+		/>
+	));
 	return (
 		<div className='app'>
 			<Navbar />
 			{/* <Hero /> */}
-			<Card
-				img='katie-zaferes.png'
-				rating='5.0'
-				reviewCount={6}
-				location='USA'
-				title='Life Lessons with Katie Zaferes'
-				price={136}
-			/>
+			{cardElements}
 		</div>
 	);
 }
