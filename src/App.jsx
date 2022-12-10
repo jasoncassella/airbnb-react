@@ -11,7 +11,7 @@ export default function App() {
 	return (
 		<div className='app'>
 			<Navbar />
-			{/* <Hero /> */}
+			<Hero />
 			<section className='cards-list'>{cards}</section>
 		</div>
 	);
