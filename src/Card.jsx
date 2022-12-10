@@ -1,21 +1,17 @@
 export default function Card(props) {
 	return (
 		<div className='card'>
-			<img src={`/src/assets/${props.img}`} width='176' />
-			<div className='line-1'>
-				<img src='/src/assets/star.png' width='14' />
+			<img src={`../src/assets/${props.img}`} className='card--image' />
+			<div className='card--stats'>
+				<img src='../src/assets/star.png' className='card--star' />
 				<span>{props.rating}</span>
-				<span className='gray'>({props.reviewCount})</span>
-				<img src='/src/assets/Ellipse-6.png' width='2' />
+				<span className='gray'>({props.reviewCount}) • </span>
 				<span className='gray'>{props.location}</span>
 			</div>
-			<div className='line-2'>
-				<span>{props.title}</span>
-			</div>
-			<div className='line-3'>
-				<span className='bold'>From {props.price}</span>
-				<span> / person</span>
-			</div>
+			<p className='card--title'>{props.title}</p>
+			<p className='card--price'>
+				<span className='bold'>From ${props.price}</span> / person
+			</p>
 		</div>
 	);
 }
