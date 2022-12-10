@@ -6,20 +6,13 @@ import data from './data';
 
 export default function App() {
 	const cards = data.map(experience => (
-		<Card
-			img={experience.coverImg}
-			rating={experience.stats.rating}
-			reviewCount={experience.stats.reviewCount}
-			location={experience.location}
-			title={experience.title}
-			price={experience.price}
-		/>
+		<Card key={experience.id} experience={experience} />
 	));
 	return (
 		<div className='app'>
 			<Navbar />
 			{/* <Hero /> */}
-			<section className="cards-list">{cards}</section>
+			<section className='cards-list'>{cards}</section>
 		</div>
 	);
 }
