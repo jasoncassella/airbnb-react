@@ -6,7 +6,7 @@ import data from './data';
 
 export default function App() {
 	const cards = data.map(experience => (
-		<Card key={experience.id} experience={experience} />
+		<Card key={experience.id} {...experience} />
 	));
 	return (
 		<div className='app'>
