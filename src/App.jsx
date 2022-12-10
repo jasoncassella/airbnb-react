@@ -5,13 +5,11 @@ import Card from './Card';
 import data from './data';
 
 export default function App() {
-	const cards = data.map(experience => (
-		<Card key={experience.id} {...experience} />
-	));
+	const cards = data.map(item => <Card key={item.id} {...item} />);
 	return (
 		<div className='app'>
-			<Navbar />
-			<Hero />
+			{/* <Navbar /> */}
+			{/* <Hero /> */}
 			<section className='cards-list'>{cards}</section>
 		</div>
 	);
